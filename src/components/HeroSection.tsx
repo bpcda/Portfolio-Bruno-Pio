@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import coatOfArms from "@/assets/coat-of-arms-crowned.png";
 const HeroSection = () => {
   const [visible, setVisible] = useState(false);
 
