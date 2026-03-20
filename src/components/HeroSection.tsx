@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import coatOfArms from "@/assets/coat-of-arms-crowned.png";
 const HeroSection = () => {
   const [visible, setVisible] = useState(false);
 
@@ -57,25 +57,18 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Decorative heraldic element */}
           <div className="lg:col-span-4 hidden lg:flex items-center justify-center">
             <div
-              className="relative w-64 h-80"
               style={{
                 opacity: visible ? 1 : 0,
                 transition: "opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.6s",
               }}
             >
-              <svg viewBox="0 0 200 260" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Shield shape */}
-                <path d="M100 10 L190 50 L190 150 Q190 220 100 250 Q10 220 10 150 L10 50 Z" stroke="hsl(var(--accent))" strokeWidth="1.5" fill="none" />
-                {/* Pine tree */}
-                <path d="M100 60 L80 120 L90 115 L75 155 L88 148 L70 190 L130 190 L112 148 L125 155 L110 115 L120 120 Z" stroke="hsl(var(--accent))" strokeWidth="1" fill="none" />
-                {/* Mountain */}
-                <path d="M55 210 L80 190 L100 200 L120 190 L145 210" stroke="hsl(var(--accent))" strokeWidth="1" fill="none" />
-                {/* Tree trunk */}
-                <line x1="100" y1="190" x2="100" y2="210" stroke="hsl(var(--accent))" strokeWidth="1" />
-              </svg>
+              <img
+                src={coatOfArms}
+                alt="Cosentini di Aieta coat of arms"
+                className="w-48 h-auto drop-shadow-lg"
+              />
             </div>
           </div>
         </div>
