@@ -24,7 +24,7 @@ const Navbar = () => {
           B.P.C.A.
         </button>
         <div className="hidden md:flex items-center gap-8">
-          {["about", "skills", "projects", "heritage", "contact"].map((section) => (
+          {["about", "skills", "projects", "contact"].map((section) => (
             <button
               key={section}
               onClick={() => scrollTo(section)}
@@ -34,6 +34,13 @@ const Navbar = () => {
               <span className="absolute bottom-0 left-0 w-0 h-px bg-accent transition-all duration-300 group-hover:w-full" />
             </button>
           ))}
+          <a
+            href="/heritage"
+            className="font-mono text-xs uppercase tracking-[0.1em] text-muted-foreground hover:text-accent transition-colors relative group"
+          >
+            heritage
+            <span className="absolute bottom-0 left-0 w-0 h-px bg-accent transition-all duration-300 group-hover:w-full" />
+          </a>
         </div>
       </div>
     </nav>
